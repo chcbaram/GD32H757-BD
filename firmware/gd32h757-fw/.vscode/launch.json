@@ -1,0 +1,25 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "cwd": "${workspaceRoot}",
+      "executable": "./build/gd32h757-fw.elf",
+      "name": "Debug with PyOCD",
+      "request": "launch",
+      "type": "cortex-debug",
+      "showDevDebugOutput": "none",      
+      "servertype": "pyocd",
+      "serverArgs": [
+        "--target", "GD32H757ZM",
+        "--pack", "tools/GigaDevice.GD32H7xx_DFP.1.4.0.pack"
+      ],         
+      "runToEntryPoint": "main",  
+      "windows": {
+        "gdbPath": "${env:ARM_TOOLCHAIN_DIR}/arm-none-eabi-gdb.exe",
+      },      
+    }   
+  ]
+}
