@@ -29,7 +29,7 @@ bool hwInit(void)
   logPrintf("\r\n[ Firmware Begin... ]\r\n");
   logPrintf("Booting..Name \t\t: %s\r\n", _DEF_BOARD_NAME);
   logPrintf("Booting..Ver  \t\t: %s\r\n", _DEF_FIRMWATRE_VERSION);  
-  // logPrintf("Booting..Clock\t\t: %d Mhz\r\n", (int)HAL_RCC_GetSysClockFreq()/1000000);
+  logPrintf("Booting..Clock\t\t: %d Mhz\r\n", (int)rcu_clock_freq_get(CK_SYS)/1000000);
   logPrintf("Booting..Date \t\t: %s\r\n", __DATE__); 
   logPrintf("Booting..Time \t\t: %s\r\n", __TIME__); 
   logPrintf("Booting..Addr \t\t: 0x%X\r\n", (uint32_t)&_fw_flash_begin); 
